@@ -20,6 +20,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (!format[i])
+			{
+				va_end(args);
+				return (-1);
+			}
 			if (format[i] == 'c')
 				count += print_char(va_arg(args, int));
 			else if (format[i] == 's')
