@@ -1,0 +1,27 @@
+.TH _PRINTF 3 "September 2025" "Custom Library" "Functions Manual"
+.SH NAME
+_printf \- custom implementation of printf
+.SH SYNOPSIS
+.B #include "main.h"
+.sp
+.BI "int _printf(const char *format, ...);"
+.SH DESCRIPTION
+The
+.B _printf
+function writes output to the standard output according to a format string.
+.PP
+Supported conversion specifiers:
+.TP
+.B %c
+Print a single character.
+.TP
+.B %s
+Print a string of characters.
+.TP
+.B %%
+Print the percent character.
+.TP
+.B %d, %i
+Print a signed decimal integer.
+.SH RETURN VALUE
+Returns the number of characters printed, or \-1 on error.
